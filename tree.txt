@@ -1,0 +1,40 @@
+.
+├── Figure2
+│   ├── 0.EVO2_scoring_GWAS.R
+│   ├── 1.Fig2A.R
+│   ├── 2.Fig2B.R
+│   ├── 3.Fig2C.R
+│   ├── APOE_ref_demo.txt
+│   ├── SNP_demo.txt
+│   └── results
+│  
+├── Figure3
+│   ├── 00.EVO2_scoring_PanGenome.sh
+│   ├── 01.Variant_calling_PanGenome.sh
+│   ├── 1.Fig3A.R
+│   ├── 2.Fig3B.R
+│   ├── 3.Fig3C.R
+│   ├── 4.Fig3D.R
+│   ├── 5.Fig3E.R
+│   └── 6.Fig3F.R
+│  
+├── Figure4
+│   ├── 0.EVO2_scoring_ADNI.R
+│   ├── 1.Fig4BC.R
+│   ├── 2.Fig4D.R
+│   └── 3.Fig4EF.R
+│  
+├── Figure5
+│   ├── 00.EVO2_scoring_UKB_VCF_to_haplotype.R
+│   ├── 01.EVO2_scoring_UKB_haplotype_to_sequence.R
+│   ├── 1.TableS10.R
+│   ├── 2.Fig5A_FAST.R
+│   ├── 3.Fig5A_FAST_plot.R
+│   ├── 4.Fig5A_SWI.R
+│   ├── 5.Fig5A_SWI_plot.R
+│   ├── 6.Fig5B_Olink.R
+│   ├── 7.Fig5BC_Olink_plot.R
+│   ├── 8.Fig5D_PheWAS.R
+│   └── 9.Fig5D_PheWAS_plot.R
+└── tree.txt
+

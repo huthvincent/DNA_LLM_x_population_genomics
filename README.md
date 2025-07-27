@@ -35,8 +35,8 @@ The full manuscript title is **“Harnessing DNA Foundation Models for Human Pop
 ## Quick Start
 ```bash
 # 1️⃣ Clone + install R deps (renv for reproducibility)
-git clone https://github.com/your-org/APOE-Evo2.git
-cd APOE-Evo2
+git clone https://github.com/huthvincent/Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus.git
+cd Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus
 Rscript -e "install.packages('renv'); renv::restore()"
 
 # 2️⃣ Point to data & Evo2 model weight directory
@@ -81,7 +81,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 | Resource | What it’s for | Access / Link |
 | -------- | ------------- | -------------- |
-| **Evo2-7B weights** | Sequence Δ-score generation | <https://github.com/oxford-deeplearning/evo2> |
+| **Evo2-7B weights** | Sequence Δ-score generation | <https://github.com/ArcInstitute/evo2/tree/main/evo2> |
 | **GRCh38 ref (Chr 19 slice)** | Base sequence for variant/haplotype editing | Included in `utils/` or any GRCh38 FASTA |
 | **ADNI WGS + phenotypes** | Individual haplotypes & PET / cognition (Fig 4) | Apply via <https://adni.loni.usc.edu> |
 | **Human Pangenome assemblies (HPRC)** | Diverse haplotypes (Fig 3) | Public: <https://humanpangenome.org> |

@@ -102,8 +102,8 @@ MIT for code, CC-BY 4.0 for docs.
 
 Contact
 
-Name	Email
 Rui Zhu	rui.zhu.rz399@yale.edu
+
 Xiaopu Zhou	xiaopu.zhou@sickkids.ca
 
 **How this was shortened** — content reduced to ~50 %, with collapsible sections, tables, and direct code blocks so you can paste straight into `README.md` and get a clean, navigable document.

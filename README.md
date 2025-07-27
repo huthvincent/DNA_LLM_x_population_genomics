@@ -37,7 +37,6 @@ The full manuscript title is **“Harnessing DNA Foundation Models for Human Pop
 # 1️⃣ Clone + install R deps (renv for reproducibility)
 git clone https://github.com/huthvincent/Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus.git
 cd Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus
-Rscript -e "install.packages('renv'); renv::restore()"
 
 # 2️⃣ Point to data & Evo2 model weight directory
 export APOE_DATA_DIR=/path/to/inputs
@@ -97,7 +96,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 License
 
-Pending – will follow journal policy (MIT for code, CC-BY 4.0 for docs).
+MIT for code, CC-BY 4.0 for docs.
 
 ⸻
 

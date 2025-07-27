@@ -64,82 +64,37 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 ⸻
 
-Reproduce the Figures
+## 🔁 Reproduce the Figures
 
-<details>
-<summary><strong>▶ Figure 2 (Δ-score vs GWAS)</strong></summary>
+> **One folder = one figure.**  
+> Each folder’s **`0*` / `00*`** script builds input sequences & Evo2 Δ-scores.  
+> Subsequent scripts analyse and plot. 👇
 
+| Figure | Folder | Quick-run Commands* | Main Outputs |
+| :---: | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------- |
+| **2** | `Figure2/` | ```bash<br># Variant scoring & GWAS overlay<br>cd Figure2<br>Rscript 0.EVO2_scoring_GWAS.R      # SNP → FASTA → Δ-score<br>Rscript 1.Fig2A.R              # regional plot<br>Rscript 2.Fig2B.R 3.Fig2C.R   # score vs GWAS<br>``` | Manhattan & scatter plots |
+| **3** | `Figure3/` | ```bash<br># Pangenome haplotypes<br>bash 00.EVO2_scoring_PanGenome.sh   # extract APOE seqs<br>bash 01.Variant_calling_PanGenome.sh<br># (then score haplotypes, see utils/)<br>Rscript 1.Fig3A.R … 6.Fig3F.R<br>``` | Diversity & ancestry panels |
+| **4** | `Figure4/` | ```bash<br># ADNI cohort<br>cd Figure4<br>Rscript 0.EVO2_scoring_ADNI.R  # per-subject haplotypes<br>Rscript 1.Fig4BC.R 2.Fig4D.R 3.Fig4EF.R<br>``` | Diagnosis, cognition, PET |
+| **5** | `Figure5/` | ```bash<br># UK Biobank scale<br>cd Figure5<br>Rscript 00.EVO2_scoring_UKB_VCF_to_haplotype.R<br>Rscript 01.EVO2_scoring_UKB_haplotype_to_sequence.R<br># MRI<br>Rscript 2.Fig5A_FAST.R 3.Fig5A_FAST_plot.R<br># SWI<br>Rscript 4.Fig5A_SWI.R 5.Fig5A_SWI_plot.R<br># Proteomics<br>Rscript 6.Fig5B_Olink.R 7.Fig5BC_Olink_plot.R<br># PheWAS<br>Rscript 8.Fig5D_PheWAS.R 9.Fig5D_PheWAS_plot.R<br>``` | MRI maps, volcano + enrichment, PheWAS Manhattan |
 
-cd Figure2
-Rscript 0.EVO2_scoring_GWAS.R        # make SNP FASTA, call Evo2
-Rscript 1.Fig2A.R                    # regional Manhattan plot
-Rscript 2.Fig2B.R && 3.Fig2C.R       # Δ-score vs Z & β
+\*Adjust paths to your **Evo2 model**, **reference FASTA**, and dataset locations via environment variables (`APOE_DATA_DIR`, `EVO2_MODEL_DIR`) or script headers.
 
-Requires AD GWAS summary statistics (.tsv with chr, pos, p, beta).
+---
 
-</details>
+## 🗂️ Data & Model
 
+| Resource | What it’s for | Access / Link |
+| -------- | ------------- | -------------- |
+| **Evo2-7B weights** | Sequence Δ-score generation | <https://github.com/oxford-deeplearning/evo2> |
+| **GRCh38 ref (Chr 19 slice)** | Base sequence for variant/haplotype editing | Included in `utils/` or any GRCh38 FASTA |
+| **ADNI WGS + phenotypes** | Individual haplotypes & PET / cognition (Fig 4) | Apply via <https://adni.loni.usc.edu> |
+| **Human Pangenome assemblies (HPRC)** | Diverse haplotypes (Fig 3) | Public: <https://humanpangenome.org> |
+| **UK Biobank genotypes, MRI, SWI, Olink, Phecodes** | Large-scale associations (Fig 5) | UKB Application; comply with MTA |
+| **LDlinkR API (optional)** | LD calculations for plots | <https://ldlink.nci.nih.gov> |
+| **R packages** | Stats & plots (`dplyr`, `ggplot2`, `robustbase`, `gprofiler2`, `cerebroViz`, …) | Auto-installed via `renv::restore()` |
 
-<details>
-<summary><strong>▶ Figure 3 (Pangenome)</strong></summary>
-
-
-bash  Figure3/00.EVO2_scoring_PanGenome.sh   # extract APOE seq from assemblies
-bash  Figure3/01.Variant_calling_PanGenome.sh
-# score haplotypes (not included – see utils/evo2_score_batch.py)
-Rscript Figure3/1.Fig3A.R  # ancestry-level plots
-...
-
-Needs minimap2, samtools, bcftools and HPRC assemblies.
-
-</details>
-
-
-<details>
-<summary><strong>▶ Figure 4 (ADNI)</strong></summary>
-
-
-cd Figure4
-Rscript 0.EVO2_scoring_ADNI.R    # reconstruct & score haplotypes
-Rscript 1.Fig4BC.R              # cohort overview
-Rscript 2.Fig4D.R               # score vs cognition / CSF
-Rscript 3.Fig4EF.R              # score vs amyloid PET
-
-Provide ADNI WGS VCFs and phenotype CSVs.
-
-</details>
-
-
-<details>
-<summary><strong>▶ Figure 5 (UK Biobank)</strong></summary>
-
-
-cd Figure5
-Rscript 00.EVO2_scoring_UKB_VCF_to_haplotype.R
-Rscript 01.EVO2_scoring_UKB_haplotype_to_sequence.R
-# MRI
-Rscript 2.Fig5A_FAST.R  && 3.Fig5A_FAST_plot.R
-# Proteomics
-Rscript 6.Fig5B_Olink.R && 7.Fig5BC_Olink_plot.R
-# PheWAS
-Rscript 8.Fig5D_PheWAS.R && 9.Fig5D_PheWAS_plot.R
-
-Requires access-approved UKB datasets (genotypes, imaging, Olink, phenotypes).
-
-</details>
-
-
-
-⸻
-
-Data & Model
-
-Resource	Access
-Evo2-7B weights	https://github.com/oxford-deeplearning/evo2 (MIT license)
-ADNI WGS & phenotypes	Application via ADNI data portal
-Human Pangenome (HPRC)	Public assemblies: https://humanpangenome.org
-UK Biobank	Application # ; abide by MTA
-Reference genome	GRCh38 FASTA (chr19 slice shipped in utils/)
+> **Note** Some datasets (ADNI, UKB) require prior access approval.  
+> Ensure credentials and local paths are configured before running scripts.
 
 
 ⸻

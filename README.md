@@ -66,17 +66,14 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 ## 🔁 Reproduce the Figures
 
-> **One folder = one figure.**  
-> Each folder’s **`0*` / `00*`** script builds input sequences & Evo2 Δ-scores.  
-> Subsequent scripts analyse and plot. 👇
-
 | Figure | Folder | Main Outputs |
-| :---: | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------- |
-| **2** | `Figure2/` |  Manhattan & scatter plots |
-| **3** | `Figure3/` |  Diversity & ancestry panels |
-| **4** | `Figure4/` |  MRI maps, volcano + enrichment, PheWAS Manhattan |
+| :----: | :----- | :----------- |
+| **2** | `Figure2/` | Manhattan & scatter plots comparing Evo2 Δ-scores with AD GWAS signals |
+| **3** | `Figure3/` | Diversity & ancestry panels of APOE haplotypes from the Human Pangenome |
+| **4** | `Figure4/` | ADNI diagnosis, cognition and amyloid-PET associations with haplotype scores |
+| **5** | `Figure5/` | MRI maps, proteomic volcano + enrichment, and a PheWAS Manhattan plot |
 
-\*Adjust paths to your **Evo2 model**, **reference FASTA**, and dataset locations via environment variables (`APOE_DATA_DIR`, `EVO2_MODEL_DIR`) or script headers.
+> *Run scripts in each folder sequentially (e.g. `0*` → `1*` …) after configuring paths to Evo2 weights and datasets.*  
 
 ---
 

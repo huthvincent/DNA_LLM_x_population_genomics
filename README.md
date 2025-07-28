@@ -51,7 +51,7 @@ Subsequent scripts generate statistics & plots.
 
 ⸻
 
-Repository Layout
+## Repository Layout
 
 Path	Role
 Figure2/	Variant-level scoring & AD GWAS overlay

@@ -81,7 +81,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 | Resource | What it’s for | Access / Link |
 | -------- | ------------- | -------------- |
 | **Evo2-7B weights** | Sequence Δ-score generation | <https://github.com/ArcInstitute/evo2/tree/main/evo2> |
-| **GRCh38 ref (Chr 19 slice)** | Base sequence for variant/haplotype editing | Included in `utils/` or any GRCh38 FASTA |
+| **GRCh38 ref (Chr 19 slice)** | Base sequence for variant/haplotype editing | GRCh38 FASTA |
 | **ADNI WGS + phenotypes** | Individual haplotypes & PET / cognition (Fig 4) | Apply via <https://adni.loni.usc.edu> |
 | **Human Pangenome assemblies (HPRC)** | Diverse haplotypes (Fig 3) | Public: <https://humanpangenome.org> |
 | **UK Biobank genotypes, MRI, SWI, Olink, Phecodes** | Large-scale associations (Fig 5) | UKB Application; comply with MTA |

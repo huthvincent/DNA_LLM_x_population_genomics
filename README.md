@@ -84,7 +84,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 | **GRCh38 ref (Chr 19 slice)** | Base sequence for variant/haplotype editing | GRCh38 FASTA |
 | **ADNI WGS + phenotypes** | Individual haplotypes & PET / cognition (Fig 4) | Apply via <https://adni.loni.usc.edu> |
 | **Human Pangenome assemblies (HPRC)** | Diverse haplotypes (Fig 3) | Public: <https://humanpangenome.org> |
-| **UK Biobank genotypes, MRI, SWI, Olink, Phecodes** | Large-scale associations (Fig 5) | UKB Application; comply with MTA |
+| **UK Biobank genotypes, MRI, SWI, Olink, Phecodes** | Large-scale associations (Fig 5) | UKB Research Platform |
 | **LDlinkR API (optional)** | LD calculations for plots | <https://ldlink.nci.nih.gov> |
 | **R packages** | Stats & plots (`dplyr`, `ggplot2`, `robustbase`, `gprofiler2`, `cerebroViz`, …) | Auto-installed via `renv::restore()` |
 

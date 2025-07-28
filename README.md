@@ -63,7 +63,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 ⸻
 
-## 🔁 Reproduce the Figures
+## Reproduce the Figures
 
 | Figure | Folder | Main Outputs |
 | :----: | :----- | :----------- |
@@ -76,7 +76,7 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 ---
 
-## 🗂️ Data & Model
+## Data & Model
 
 | Resource | What it’s for | Access / Link |
 | -------- | ------------- | -------------- |
@@ -94,13 +94,13 @@ utils/(optional)	helper scripts for Evo2 API, plotting themes
 
 ⸻
 
-License
+## License
 
 MIT for code, CC-BY 4.0 for docs.
 
 ⸻
 
-Contact
+## Contact
 
 Rui Zhu	rui.zhu.rz399@yale.edu
 

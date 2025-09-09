@@ -1,6 +1,8 @@
 # 🧬 Harnessing DNA Foundation Models for Human Population Genomics  
 ### Insights from the **APOE** Locus   
 
+![DNA LLM population genomics overview](./DNA_LLM_population_genome.png)
+
 > **One-liner**  
 > **Evo2** DNA foundation model + population-scale WGS → variant & haplotype scores that illuminate Alzheimer’s genetics across ADNI, HPRC & UK Biobank.
 

@@ -1,4 +1,4 @@
-# 🧬 Harnessing DNA Foundation Models for Human Population Genomics  
+# 🧬 Advancing Human Population Genomics with DNA Foundation Models  
 ### Insights from the **APOE** Locus   
 
 ![DNA LLM population genomics overview](./DNA_LLM_population_genome.png)
@@ -30,15 +30,15 @@ Here we score every variant *and* full-length haplotype in the APOE region (chr1
 | **4** | Scores predict amyloid & cognition | ADNI WGS + PET |
 | **5** | MRI, proteomic & PheWAS landscape | UK Biobank |
 
-The full manuscript title is **“Harnessing DNA Foundation Models for Human Population Genomics: Insights from the APOE Locus.”**
+The full manuscript title is **“Advancing Human Population Genomics with DNA Foundation Models: Insights from the APOE Locus.”**
 
 ---
 
 ## Quick Start
 ```bash
 # 1️⃣ Clone + install R deps (renv for reproducibility)
-git clone https://github.com/huthvincent/Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus.git
-cd Harnessing-DNA-Foundation-Models-for-Human-Population-Genomics-Insights-from-the-APOE-Locus
+git clone https://github.com/huthvincent/Advancing-Human-Population-Genomics-with-DNA-Foundation-Models.git
+cd Advancing-Human-Population-Genomics-with-DNA-Foundation-Models
 
 # 2️⃣ Point to data & Evo2 model weight directory
 export APOE_DATA_DIR=/path/to/inputs
